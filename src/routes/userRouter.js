@@ -4,4 +4,5 @@ import { validateUserSchema } from "../middleware/validateUserSchema.js";
 
 const userRouter = Router();
 userRouter.post('/sign-up', validateUserSchema, signUp);
+
 export default userRouter;
