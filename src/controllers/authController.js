@@ -11,7 +11,7 @@ export async function login(req, res){
     if(bcrypt.compareSync(password, user.password)){
         const token = uuid();
         await db.collection('sessions').insertOne({token, userId: user._id});
-        res.sedn(token);
+        res.send(token);
     }
     res.sendStatus(401);
 }
